@@ -53,7 +53,8 @@ public class C15_BaseUrlJsonPlaceHolder extends JsonPlaceHolderBaseURL {
 
         // 4- Assertion
 
-        response.then().assertThat().statusCode(200).body("title", Matchers.hasSize(100));
+        response.then().assertThat().statusCode(200)
+                                .body("title", Matchers.hasSize(100));
 
     }
 

@@ -6,6 +6,7 @@ import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.hasSize;
 
 public class C17_BaseUrlHerokuappQueryParam extends HerokuAppBaseUrl {
 
@@ -108,7 +109,7 @@ public class C17_BaseUrlHerokuappQueryParam extends HerokuAppBaseUrl {
 
         // 4- Assertion
 
-        response.then().assertThat().statusCode(200);
+        response.then().assertThat().statusCode(200).body("bookingid",hasSize(3));
 
     }
 
