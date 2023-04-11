@@ -50,5 +50,18 @@ public class TestDataJsonPlaceHolder {
         return  reqBody;
     }
 
+    public JSONObject expectedDataOlusturJson(){
+
+    JSONObject expData=new JSONObject();
+
+    expData.put("title","Ahmet");
+    expData.put("body","Merhaba");
+    expData.put("userId",10);
+    expData.put("id",70);
+
+
+    return expData;
+
+    }
 
 }
