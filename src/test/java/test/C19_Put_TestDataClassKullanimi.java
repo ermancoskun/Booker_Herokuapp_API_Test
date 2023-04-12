@@ -40,7 +40,7 @@ public class C19_Put_TestDataClassKullanimi extends JsonPlaceHolderBaseURL {
 
         TestDataJsonPlaceHolder testDataJsonPlaceHolder= new TestDataJsonPlaceHolder();
 
-        JSONObject reqBody= testDataJsonPlaceHolder.requestBodyOlusturJson();
+
 
         // 2- Expected data hazirla
 

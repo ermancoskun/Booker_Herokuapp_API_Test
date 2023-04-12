@@ -2,6 +2,9 @@ package testData;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Objects;
+
 public class TestDataJsonPlaceHolder {
 
     public int basarilistatusCode=200;
@@ -29,39 +32,26 @@ public class TestDataJsonPlaceHolder {
         return expBody;
     }
 
-    public JSONObject requestBodyOlusturJson(){
+    public HashMap reqBodyOlusturMap(){
 
         /*
-        Request Body
         {
-            "title":"Ahmet",
-            "body":"Merhaba",
-            "userId": 10,
-            "id":70
-           }
+        "title":"Ahmet",
+        "body":"Merhaba",
+        "userId":10,
+        "id":70
+        }
          */
-        JSONObject reqBody=new JSONObject();
+
+        HashMap <String, Object> reqBody= new HashMap<>();
 
         reqBody.put("title","Ahmet");
         reqBody.put("body","Merhaba");
-        reqBody.put("userId",10);
-        reqBody.put("id",70);
+        reqBody.put("userId",10.0);
+        reqBody.put("id",70.0);
 
-        return  reqBody;
+        return reqBody;
     }
 
-    public JSONObject expectedDataOlusturJson(){
-
-    JSONObject expData=new JSONObject();
-
-    expData.put("title","Ahmet");
-    expData.put("body","Merhaba");
-    expData.put("userId",10);
-    expData.put("id",70);
-
-
-    return expData;
-
-    }
 
 }
